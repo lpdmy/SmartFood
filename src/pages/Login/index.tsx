@@ -1,17 +1,15 @@
 
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+
 
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 export function Login() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
 
-  const [message, setMessage] = useState<string | null>(null);
-  const navigate = useNavigate();
+
+
   useEffect(() => {
     AOS.init();
   }, []);
@@ -47,8 +45,7 @@ export function Login() {
                       required
                       className="w-full text-sm border-b border-gray-300 focus:border-[#333] px-2 py-3 outline-none"
                       placeholder="Enter username or email"
-                      value={username}
-                      onChange={(e) => setUsername(e.target.value)}
+
                     />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -90,8 +87,8 @@ export function Login() {
                       required
                       className="w-full text-sm border-b border-gray-300 focus:border-[#333] px-2 py-3 outline-none"
                       placeholder="Enter password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
+
+                  
                     />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +125,7 @@ export function Login() {
                     </a>
                   </div>
                 </div>
-                <p className="text-red-400 p-5 bg-white font-medium text-sm text-red-500">{message}</p>
+                <p className="text-red-400 p-5 bg-white font-medium text-sm text-red-500"></p>
 
 
               <div className="mt-12">
